@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.sideproject.springworks.dto.ApprovMapper">
+
+	<!-- 메인 - 테마 아이콘 -->
+<!-- 	<select id="listTheme" resultType="ThemeDTO"> 
+		select * from house_theme order by htheme asc
+	</select> -->
+
+
+</mapper>

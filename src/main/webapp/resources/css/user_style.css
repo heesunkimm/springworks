@@ -1,0 +1,436 @@
+header {height: 100px; display: flex; justify-content:space-around; align-items: center;}
+header .logo_box p a {font-size: 32px; font-weight: 700; color: #52D2D8;}
+header .nav_list {display: flex;}
+header .nav_list li a {display: inline-block; padding: 12px 24px; font-size: 18px;}
+header .edit_box a {display: flex; align-items: center; gap: 6px; font-size: 14px;}
+header .edit_box .img_box {width: 16px; height: 16px;}
+.tab-content, .opt-content {display: none;}
+
+/* s: div 영역 공통 */
+.content {display: flex;}
+.content .left_box {width: 280px; min-height: 630px; background-color: #f6f7fa; border-right: 1px solid #ddd; padding: 50px 10px;}
+.content .left_box .cont_list li {width: 100%; height: 28px; border-radius: 4px; font-size: 16px;}
+.content .left_box .cont_list li + li {margin-top: 6px;}
+.content .left_box .cont_list li a {display: block; padding: 4px 10px;}
+.content .left_box .cont_list li:hover {background-color: #ebeff4;}
+.content .right_box {width: 1100px; margin: 0 auto;}
+#sec_mailbox .tab-content, #sec_approval .right_box, #sec_conference .right_box, #sec_editinfo .right_box {padding: 30px 0;}
+/* e: div 영역 공통 */
+
+/* s: 메일 영역 공통 */
+.content .right_box .mail_box .mail_list_wrap .mail_list li:first-child, 
+.content .right_box .mail_box .mail_list_wrap .mail_list li + li {border-top: 1px solid #ccc;}
+.content .right_box .mail_box .mail_list_wrap .mail_list li:last-child {border-bottom: 1px solid #ccc;}
+.content .right_box .mail_box .mail_list_wrap .mail_list .mail_item .mail,
+.content .right_box .mail_box .mail_list_wrap .mail_list .mail_item .mail .mail_sender {display: flex; justify-content: space-between; align-items: center;}
+.content .right_box .mail_box .mail_list_wrap .mail_list .mail_item .mail .mail_check {display: flex;}
+.content .right_box .mail_box .mail_list_wrap .mail_list .mail_item .mail .mail_check label {width: 16px; height: 16px;}
+.content .right_box .mail_box .mail_list_wrap .mail_list .mail_item .mail .mail_check label input {width: 100%; height: 100%;}
+.content .right_box .mail_box .mail_list_wrap .mail_list .mail_item .mail .mail_bookmark {width: 20px; height: 20px;}
+.content .right_box .mail_box .mail_list_wrap .mail_list .mail_item .mail .mail_sender .img_box {width: 24px; height: 24px;}
+.content .right_box .mail_box .mail_list_wrap .mail_list .mail_item .mail .mail_sender button {margin: 0 16px; padding: 6px; font-size: 16px;}
+.content .right_box .mail_box .mail_list_wrap .mail_list .mail_item .mail .mail_title {text-align: center;}
+.content .right_box .mail_box .mail_list_wrap .mail_list .mail_item .mail .mail_title a {display: inline-block; width: 100%; height: 100%; padding: 6px 0;}
+.content .right_box .mail_box .mail_list_wrap .mail_list .mail_item .mail .mail_date {font-size: 14px; color: #666;}
+/* e: 메일영역 공통 */
+
+/* s: main */
+#sec_main .left_box .my_profile .img_box {width: 100px; height: 100px; margin: 0 auto; border: 1px solid #ccc; text-align: center;}
+#sec_main .left_box .my_profile .txt_box {margin: 10px 0; text-align: center;}
+#sec_main .left_box .my_profile .txt_box p + p {margin: 6px 0;}
+#sec_main .left_box .my_profile .txt_box p {font-size: 16px;}
+#sec_main .left_box .my_profile .txt_box .my_division {color: #666;}
+#sec_main .left_box .my_profile .txt_box .my_edit {font-size: 14px; color:  #555;}
+
+#sec_main .left_box .attend_box {padding: 10px 0; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+#sec_main .left_box .attend_box .txt_box {text-align: center;}
+#sec_main .left_box .attend_box .txt_box p + p, 
+#sec_main .left_box .attend_box .attend_check p + p {margin-top: 6px;}
+#sec_main .left_box .attend_box .txt_box .txt_tit {font-size: 16px;}
+#sec_main .left_box .attend_box .txt_box .txt_today, #sec_main .left_box .attend_box .txt_box .txt_clock {font-size: 16px; color: #555;}
+#sec_main .left_box .attend_box .attend_check {margin-top: 16px; display: flex; align-items: center; justify-content: space-between; padding: 0 30px; border-radius: 2px; font-size: 17px;}
+#sec_main .left_box .attend_box .attend_check .btn_box button {padding: 6px 10px; background-color: #00b6c2; border-radius: 4px; font-size: 14px; color: #fefefe;}
+/* s: 캘린더 */
+#sec_main .ui-datepicker {width: 270px; margin: 0 auto; padding: 0; background-color: transparent; border: none !important;}
+#sec_main .ui-datepicker table {margin: 0 auto; font-size: 1em;}
+#sec_main .ui-datepicker .ui-datepicker-header {position: relative; width: 100%; height: 40px; display: flex; justify-content: center; background-color: transparent; border: none;}
+#sec_main .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {position: absolute; top: 50%!important; transform: translateY(-50%);}
+#sec_main .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {position: initial; display: inline-block; margin: 0; width: 100%; height: 100%; background: url('../images/main/arrow.png') no-repeat center; background-size: 1.5em;}
+#sec_main .ui-datepicker .ui-datepicker-next span {transform: rotate(180deg); background-size: 1.5em;}
+#sec_main .ui-datepicker .ui-datepicker-title {font-size: 1.2em; line-height: 40px;}
+#sec_main .ui-datepicker th {width: 48px; padding: 0.5em 0; font-size: 1em;}
+#sec_main .ui-datepicker td {position: relative; width: 48px; height: 36px;}
+#sec_main .ui-datepicker td span, .ui-datepicker td a {height: 100%; padding: 0 2px;}
+#sec_main .ui-datepicker .ui-state-default {position: relative; border: 1px solid #ccc; box-sizing: border-box; background-color: transparent; font-size: 0.9em; text-align: right; color: #333; padding: .15em;}
+#sec_main .ui-datepicker .ui-state-default::before {content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+#sec_main .ui-datepicker .ui-state-default span {position: absolute; left: 50%; transform: translateX(-50%); bottom: 0.1em; width: 100%; height: initial; font-size: 16px; text-align: center;}
+/* e: 캘린더 */
+
+/* s: 개인정보 수정 */
+#sec_main .popup_box .info_box {display: flex;}
+#sec_main .popup_box .info_box .my_profile .img_box {width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; border: 1px solid #ccc;}
+#sec_main .popup_box .info_box .my_profile label {margin-top: 14px;}
+#sec_main .popup_box .info_box .my_info label {width: 100%;}
+/* e: 개인정보 수정 */
+
+#sec_main .right_box {width: 1100px; padding: 50px 30px;}
+#sec_main .right_box .mail_box {display: flex; justify-content: space-between; max-height: 240px; font-size: 16px;}
+#sec_main .right_box .mail_box .mail_summary {display: flex; align-items: center;}
+#sec_main .right_box .mail_box .mail_summary .img_box {width: 50px;}
+#sec_main .right_box .mail_box .mail_summary .txt_box {margin-left: 20px; font-size: 18px;}
+#sec_main .right_box .mail_box .mail_list_wrap {width: 700px;}
+#sec_main .right_box .mail_box .mail_list_wrap .tit_box {display: flex; justify-content: space-between; align-items: center; font-size: 16px;}
+#sec_main .right_box .mail_box .mail_list_wrap .mail_list {margin-top: 20px;}
+
+#sec_main .right_box .noti_box {margin-top: 14px; max-height: 390px;}
+#sec_main .right_box .noti_box .noti_list {margin-top: 20px;}
+#sec_main .right_box .noti_box .box_tit {font-size: 16px;}
+/* e: main */
+
+/* s: sec_mailbox */
+/* s: sec_mailbox -left-box */
+#sec_mailbox .left_box .btn_box {display: flex; justify-content: center; align-items: center; background-color: #212B4E; border-radius: 8px; overflow: hidden;}
+#sec_mailbox .left_box .btn_box li:first-child {position: relative;}
+#sec_mailbox .left_box .btn_box li:first-child::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); right: 0; display: block; width: 1px; height: 100%; background-color: #091747;}
+#sec_mailbox .left_box .btn_box li a {display: inline-block; padding: 12px 34px; font-size: 16px; color: #fefefe;}
+
+#sec_mailbox .left_box .mail_summary {display: flex; justify-content: center; align-items: center; margin-top: 30px; gap: 10px;}
+#sec_mailbox .left_box .mail_summary .summary_item {position: relative; width: 60px; height: 46px;}
+#sec_mailbox .left_box .mail_summary .summary_item a:hover {filter: invert(48%) sepia(40%) saturate(5817%) hue-rotate(155deg) brightness(107%) contrast(103%);}
+#sec_mailbox .left_box .mail_summary .summary_item:not(:last-child)::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); right: -6px; display: block; width: 1px; height: 50%; background-color: #ccc;}
+#sec_mailbox .left_box .mail_summary .summary_item a {display: inline-flex; flex-direction: column; justify-content: space-between; align-items: center; width: 100%; height: 100%;}
+#sec_mailbox .left_box .mail_summary .summary_item .img_box {width: 20px;}
+#sec_mailbox .left_box .mail_summary .summary_item .count {font-size: 18px;}
+#sec_mailbox .left_box .mail_summary .summary_item span:last-child {font-size: 12px; color: #ccc;}
+
+#sec_mailbox .left_box .mail_category {margin-top: 30px; padding: 0 10px;}
+#sec_mailbox .left_box .mail_category li + li {margin-top: 8px;}
+#sec_mailbox .left_box .mail_category .category_item {width: 100%; border-radius: 4px; font-size: 14px; line-height: 20px;}
+#sec_mailbox .left_box .mail_category .category_item:hover {background-color: #ebeff4;}
+#sec_mailbox .left_box .mail_category .category_item a {padding: 4px 10px; display: flex; align-items: center; height: 100%;}
+#sec_mailbox .left_box .mail_category .category_item .img_box {margin-right: 10px; width: 18px; height: 18px;}
+/* e: sec_mailbox -left-box */
+
+/* s: sec_mailbox -right-box */
+/* s: sec_mailbox - tab-content 공통 */
+#sec_mailbox .tab-content .title_box {margin-bottom: 30px; font-size: 16px; font-weight: 700;}
+#sec_mailbox .tab-content .title_box em, #sec_mailbox .tab-content .title_box span {font-size: 16px;}
+#sec_mailbox .tab-content .title_box span {margin: 0 2px;}
+#sec_mailbox .tab-content .title_box .not_read {color: #52D2D8;}
+#sec_mailbox .tab-content .mail_label {width: 1000px; display: inline-flex; justify-content: space-between;}
+#sec_mailbox .tab-content input[type="text"] {width: 916px; border-bottom: 1px solid #ccc; border-left: none; border-top: none; border-right: none; font-size: 16px; padding: 2px 4px;}
+#sec_mailbox .tab-content input[type="file"] {border-bottom: 1px solid #ccc; border-left: none; border-top: none; border-right: none;}
+#sec_mailbox .tab-content .mail_content {margin-top: 30px; width: 100%; min-height: 500px;}
+#sec_mailbox .tab-content textarea {width: 100%; min-height: 500px; font-size: 16px;}
+
+#sec_mailbox .tab-content .mail_toolbox {display: flex; align-items: center; padding: 0 10px;}
+#sec_mailbox .tab-content .mail_toolbox .mail_check label {width: 16px; height: 16px}
+#sec_mailbox .tab-content .mail_toolbox .mail_check label input {width: 100%; height: 100%;}
+#sec_mailbox .tab-content .mail_toolbox .select_box {margin-left: 30px; display: flex; align-items: center; gap: 10px; font-size: 16px; line-height: 20px;}
+#sec_mailbox .tab-content .mail_toolbox .select_box select {font-size: 14px; padding: 2px 0; border-radius: 2px;}
+#sec_mailbox .tab-content .mail_box {margin-top: 10px; padding: 0 10px;}
+/* e: sec_mailbox - tab-content 공통 */
+
+/* mailbox_write: 메일쓰기 */
+#sec_mailbox #mailbox_write .mail_toolbar {display: flex; align-items: center; gap: 10px;}
+#sec_mailbox #mailbox_write .mail_toolbar button {padding: 4px 10px; border: 1px solid transparent; border-radius: 4px; font-size: 14px;}
+#sec_mailbox #mailbox_write .mail_toolbar button:first-child {border: 1px solid #00b6c2; color: #00b6c2;}
+#sec_mailbox #mailbox_write .mail_toolbar button:last-child:hover {border: 1px solid #212B4E; color: #212B4E;}
+#sec_mailbox #mailbox_write .mail_write_option {margin-top: 10px;}
+#sec_mailbox #mailbox_write .mail_write_option div + div {margin-top: 6px;}
+#sec_mailbox #mailbox_write .mail_write_option .mail_recipient {display: flex; justify-content: space-between;}
+#sec_mailbox #mailbox_write .mail_write_option .mail_recipient .addr_btn {padding: 4px 8px; border-radius: 4px; background-color: #212B4E; font-size: 14px; color: #fefefe;}
+#sec_mailbox #mailbox_write .mail_write_option .include_file span {margin-right: 8px; font-size: 16px;}
+
+/* mailbox_tome: 내게쓰기 */
+#sec_mailbox #mailbox_tome .mail_toolbar {display: flex; align-items: center; gap: 10px;}
+#sec_mailbox #mailbox_tome .mail_toolbar button {padding: 4px 10px; border: 1px solid transparent; border-radius: 4px; font-size: 14px;}
+#sec_mailbox #mailbox_tome .mail_toolbar button:first-child {border: 1px solid #00b6c2; color: #00b6c2;}
+#sec_mailbox #mailbox_tome .mail_toolbar button:last-child:hover {border: 1px solid #212B4E; color: #212B4E;}
+#sec_mailbox #mailbox_tome .mail_write_option {margin-top: 10px;}
+#sec_mailbox #mailbox_tome .mail_write_option div + div {margin-top: 6px;}
+#sec_mailbox #mailbox_tome .mail_write_option .include_file span {margin-right: 8px; font-size: 16px;}
+/* e: sec_mailbox -right-box */
+/* e: sec_mailbox */
+
+/* s: sec_approval */
+#sec_approval .approval_list li {width: 100%; height: 28px; border-radius: 4px; font-size: 16px;}
+#sec_approval .approval_list li + li {margin-top: 6px;}
+#sec_approval .approval_list li a {display: block; padding: 4px 10px;}
+#sec_approval .approval_list li:hover {background-color: #ebeff4;}
+
+#sec_approval .tab-content .title_box {margin-bottom: 30px; font-size: 16px; font-weight: 700;}
+#sec_approval .tab-content .search_box {border: 1px solid #ccc; border-radius: 4px; padding: 14px 20px;}
+#sec_approval .tab-content .search_box .input_title {width: 270px;}
+#sec_approval .tab-content .search_box .input_writer {width: 120px;}
+#sec_approval .tab-content .search_box span, #sec_approval .tab-content .search_box input[type="text"], #sec_approval .tab-content .search_box select, #sec_approval .tab-content .search_box button {margin-left: 6px; font-size: 16px;}
+#sec_approval .tab-content .search_box .select_date {margin-bottom: 10px;}
+#sec_approval .tab-content .search_box label + label {margin-left: 6px;}
+#sec_approval .tab-content .search_box select {padding: 4px 10px;}
+#sec_approval .tab-content .search_box input[type="text"] {padding: 3px 6px;}
+#sec_approval .tab-content .search_box button {padding: 2px 10px; border-radius: 2px; background-color: #091747; color: #fefefe;}
+#sec_approval .tab-content .approval_list {margin-top: 20px;}
+
+#sec_approval .tab-content .search_box .check_label {display: inline-flex; align-items: center; gap: 6px;}
+#sec_approval .tab-content .search_box input[type="checkbox"] {width: 14px; height: 14px;}
+
+#sec_approval .approval_insert select {margin-left: 6px; padding: 4px 10px; font-size: 16px;}
+#sec_approval .approval_insert .input_box .docs_sign {margin-top: 30px; display: flex; align-items: center; justify-content: flex-end;}
+#sec_approval .approval_insert .input_box .docs_sign dl {width: 70px; text-align: center; border: 1px solid #555;}
+#sec_approval .approval_insert .input_box .docs_sign dl:not(:first-child) {border-left: none;}
+#sec_approval .approval_insert .input_box .docs_sign dt, #sec_approval .input_box .docs_sign dd {padding: 4px 0;}
+#sec_approval .approval_insert .input_box .docs_sign dt {border-bottom: 1px solid #555; font-size: 13px;}
+#sec_approval .approval_insert .input_box .docs_sign dd {height: 50px; font-size: 15px;}
+ 
+#sec_approval .approval_insert .input_box .docs_info {margin-top: 30px; display: flex; align-items: flex-end; justify-content: space-between;}
+#sec_approval .approval_insert .input_box .docs_info div dl {width: 280px; display: flex; border: 1px solid #555; text-align: center;}
+#sec_approval .approval_insert .input_box .docs_info div dl:last-child {border-top: none;}
+#sec_approval .approval_insert .input_box .docs_info div dt, 
+#sec_approval .approval_insert .input_box .docs_info div dd {height: 46px; line-height: 46px;}
+#sec_approval .approval_insert .input_box .docs_info div dt {width: 36%; border-right: 1px solid #555;}
+#sec_approval .approval_insert .input_box .docs_info div dd {width: 64%;}
+#sec_approval .approval_insert .input_box .docs_info > dl {height: 46px; display: flex; align-items: center; border: 1px solid #555; font-size: 15px;}
+#sec_approval .approval_insert .input_box .docs_info > dl dt {width: 90px; height: 100%; line-height: 46px; border-right: 1px solid #555; text-align: center;}
+#sec_approval .approval_insert .input_box .docs_info > dl dd {display: flex; align-items: center; justify-content: space-between; width: 240px; height: 100%; line-height: 46px; padding: 0 6px;}
+#sec_approval .approval_insert .input_box .docs_info > dl dd span {font-size: 13px; color: #555;}
+#sec_approval .approval_insert .input_box .docs_info > dl dd .addr_icon {width: 16px; height: 16px;}
+#sec_approval .approval_insert .input_box .docs_info > dl dd button {font-size: 15px; line-height: 19px; border-bottom: 1px solid #555;}
+#sec_approval .approval_insert .input_box .docs_details {margin-top: 30px;}
+#sec_approval .approval_insert .input_box .docs_details .docs_title {margin-bottom: 30px; text-align: center;}
+#sec_approval .approval_insert .input_box .docs_details .docs_title p {font-size: 32px; text-align: center;}
+#sec_approval .approval_insert .input_box .docs_details dl {width: 100%; display: flex; align-items: center; border: 1px solid #555; text-align: center;}
+#sec_approval .approval_insert .input_box .docs_details dl:not(:last-child) {border-bottom: none;}
+#sec_approval .approval_insert .input_box .docs_details dl dt {width: 10%; height: 100%; display: flex; align-items: center; justify-content: center; border-right: 1px solid #555;}
+#sec_approval .approval_insert .input_box .docs_details dl dd {width: 90%;}
+#sec_approval .approval_insert .input_box .docs_details .docs_name, #sec_approval .input_box .docs_details .docs_date {height: 56px;}
+#sec_approval .approval_insert .input_box .docs_details .docs_cont {height: 478px;}
+#sec_approval .approval_insert .input_box .docs_details label {display: block; width: 100%;}
+#sec_approval .approval_insert .input_box .docs_details input {width: 978px; height: 56px; padding: 0 6px; border: none; font-size: 15px;}
+#sec_approval .approval_insert .input_box .docs_details input[type="date"] {width: 110px;}
+#sec_approval .approval_insert .input_box .docs_details textarea {width: 984px; height: 469px; border: none; font-size: 15px;}
+#sec_approval .approval_insert .btn_box {margin-top: 30px; text-align: center;}
+#sec_approval .approval_insert .btn_box button {padding: 6px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;}
+#sec_approval .approval_insert .btn_box button:first-child {margin-right: 10px; border: 1px solid #00b6c2; color: #00b6c2;}
+
+#sec_approval .popup_box form > ul {width: 600px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;}
+#sec_approval .popup_box form > ul > li {width: 170px; height: 80px; padding: 10px; border: 1px solid #ccc; border-radius: 4px;}
+#sec_approval .popup_box form > ul > li .txt_box .txt_group {font-size: 15px; color: #555;}
+#sec_approval .popup_box form > ul > li .txt_box .txt_posi {margin-top: 10px; font-size: 13px; color: #999;}
+#sec_approval .popup_box form > ul > li .txt_box label {display: flex; align-items: center; gap: 4px;}
+#sec_approval .popup_box form > ul > li .txt_box input[type="checkbox"] {width: 12px; height: 12px;}
+#sec_approval .popup_box form > ul > li .txt_box .txt_posi li + li {margin-top: 6px;}
+/* e: sec_app roval */
+
+/* s: sec_attend */
+#sec_attend .title_box {margin: 30px 0; font-size: 16px; font-weight: 700;}
+#sec_attend .attend_box {display: flex; justify-content: center; gap: 14px;}
+#sec_attend .attend_box .attend_year {width: 60px; border: none; font-size: 20px; text-align: center;}
+#sec_attend .attend_box .select_month, #sec_attend .select_year {display: flex; justify-content: center;}
+#sec_attend .attend_box .select_month .img_box, #sec_attend .select_year .img_box {width: 20px; cursor: pointer;}
+#sec_attend .attend_box .select_month input {width: 30px; margin: 0 3px; border: none; font-size: 20px; text-align: center;}
+#sec_attend .select_year input {width: 60px; margin: 0 3px; border: none; font-size: 20px; text-align: center;}
+
+#sec_attend .off_box {margin: 30px 0; display: flex; justify-content: flex-end; align-items: center;}
+#sec_attend .off_box dl  {width: 70px; border: 1px solid #091747; box-sizing: border-box; font-size: 14px; text-align: center; color: #555;}
+#sec_attend .off_box dl:first-child {border-radius: 2px 0 0 2px; overflow: hidden;}
+#sec_attend .off_box dl:last-child {border-radius: 0 2px 2px 0; overflow: hidden;}
+#sec_attend .off_box dl + dl {border-left: none;}
+#sec_attend .off_box dt {background-color: #091747; color: #f6f7fa; padding: 4px 0; font-size: 13px;}
+#sec_attend .off_box dd {background-color: #f6f7fa; color: #091747; padding: 4px 0; font-size: 15px; font-weight: 700;}
+
+#sec_attend .month_box {margin-top: 30px; border-bottom: 1px solid #ccc;}
+#sec_attend .month_box .day_box + .day_box {border-top: 1px solid #ccc;}
+#sec_attend .month_box .day_toolbar {background-color: #091747; color: #fefefe; border-radius: 2px 2px 0 0;}
+#sec_attend .month_box .day_box ul, #sec_attend .month_box .day_toolbar ul {display: flex; justify-content: center; align-items: center;}
+#sec_attend .month_listbox .day_box ul li, #sec_attend .month_listbox .day_toolbar ul li,
+#sec_attend .off_listbox .day_box ul li, #sec_attend .off_listbox .day_toolbar ul li {height: 100%; font-size: 16px; line-height: 34px; text-align: center;}
+#sec_attend .month_listbox .day_box ul li, #sec_attend .month_listbox .day_toolbar ul li {width: calc(100%/6);}
+#sec_attend .off_listbox .day_box ul li, #sec_attend .off_listbox .day_toolbar ul li {width: calc(100%/5);}
+/* e: sec_attend */
+
+/* s: sec_conference */
+#sec_conference .tab-content .title_box {margin: 30px 0; font-size: 16px; font-weight: 700;}
+#sec_conference .tab-content .reserve_list {border-radius: 4px 4px 0 0; overflow: hidden;}
+#sec_conference .tab-content .reserve_list thead {background-color: #091747; color: #fefefe;}
+#sec_conference .tab-content .reserve_list thead select {background: transparent; border: none; color: #fff; font-size: 16px; width: 100%; height: 100%;}
+#sec_conference .tab-content .reserve_list thead select option {background-color: #091747; color: #fefefe;}
+
+/* s: 캘린더 */
+#sec_conference .ui-datepicker {width: 400px; margin: 0 auto; padding: 0; background-color: transparent; border: none !important;}
+#sec_conference .ui-datepicker table {margin: 0 auto; font-size: 1em; height: 100%;}
+#sec_conference .ui-datepicker .ui-datepicker-header {position: relative; width: 100%; height: 40px; display: flex; justify-content: center; background-color: transparent; border: none;}
+#sec_conference .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {position: absolute; top: 50%!important; transform: translateY(-50%);}
+#sec_conference .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {position: initial; display: inline-block; margin: 0; width: 100%; height: 100%; background: url('../images/main/arrow.png') no-repeat center; background-size: 1.5em;}
+#sec_conference .ui-datepicker .ui-datepicker-next span {transform: rotate(180deg); background-size: 1.5em;}
+#sec_conference .ui-datepicker .ui-datepicker-title {font-size: 1.2em; line-height: 40px;}
+#sec_conference .ui-datepicker th {width: 48px; padding: 0.5em 0; font-size: 1em;}
+#sec_conference .ui-datepicker td {position: relative; width: 48px; height: 36px;}
+#sec_conference .ui-datepicker td span, .ui-datepicker td a {height: 100%; padding: 0 2px;}
+#sec_conference .ui-datepicker .ui-state-default {position: relative; border: 1px solid #ccc; box-sizing: border-box; background-color: transparent; font-size: 0.9em; text-align: right; color: #333; padding: .15em;}
+#sec_conference .ui-datepicker .ui-state-default::before {content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+#sec_conference .ui-datepicker .ui-state-default span {position: absolute; left: 50%; transform: translateX(-50%); bottom: 0.1em; width: 100%; height: initial; font-size: 16px; text-align: center;}
+/* e: 캘린더 */
+
+#sec_conference .right_box .btn_box {margin-bottom: 20px; text-align: right;}
+#sec_conference .right_box .btn_box a {font-size: 15px; border-bottom: 1px solid #555; color: #555;}
+#sec_conference .right_box .date_box {margin-bottom: 20px; font-size: 16px;}
+#sec_conference .right_box .confReserveBox {width: 400px;}
+#sec_conference .right_box .confReserveBox div span, 
+#sec_conference .right_box .confReserveBox select, 
+#sec_conference .right_box .confReserveBox input {font-size: 16px;}
+#sec_conference .right_box .confReserveBox div + div,
+#sec_conference .right_box .confReserveBox label {margin-top: 10px;}
+#sec_conference .right_box .confReserveBox .input_box div:not(:first-child), 
+#sec_conference .right_box .confReserveBox .input_box label {display: flex; align-items: center; gap: 20px;}
+#sec_conference .right_box .confReserveBox .select_date .date_noti {margin-top: 6px; font-size: 13px; color: #555;}
+#sec_conference .right_box .confReserveBox .select_time select {padding: 3px 10px;}
+#sec_conference .right_box .confReserveBox input[type="text"] {width: 250px; padding: 3px 6px;}
+
+
+#sec_conference .right_box .search_box {border: 1px solid #ccc; border-radius: 4px; padding: 14px 20px;}
+#sec_conference .right_box .search_box label, #sec_conference .right_box .search_box input[type="text"], #sec_conference .right_box .search_box select, #sec_conference .right_box .search_box .search_btn {margin-left: 6px; font-size: 16px;}
+#sec_conference .right_box .search_box input[type="text"] {padding: 3px 6px;}
+#sec_conference .right_box .search_box input[type="checkbox"] {width: 14px; height: 14px;}
+#sec_conference .right_box .search_box select {padding: 4px 10px;}
+#sec_conference .right_box .search_box .search_btn {padding: 2px 10px; border-radius: 2px; background-color: #091747; color: #fefefe;}
+#sec_conference .right_box .conference_list {margin-top: 20px; border-radius: 2px 2px 0 0; overflow: hidden;}
+#sec_conference .right_box .conference_list thead {background-color: #091747; color: #fefefe;}
+#sec_conference .right_box .conference_list tbody td + td {border-left: 1px solid #ccc;}
+
+#sec_conference .popup_box .input_box {width: 400px;}
+#sec_conference .popup_box .date_noti {margin-top: 10px; font-size: 13px; color: #555;}
+#sec_conference .popup_box label:not(:first-child), #sec_conference .popup_box .select_time {margin-top: 10px;}
+#sec_conference .popup_box label, #sec_conference .popup_box .select_time {display: flex; align-items: center; justify-content: space-between;}
+#sec_conference .popup_box .select_time select {padding: 3px 27px; font-size: 16px;}
+#sec_conference .popup_box .select_time div {width: 214px; text-align: center;}
+#sec_conference .popup_box label input {width: 200px; padding: 3px 6px; font-size: 16px;}
+
+/* e: sec_conference */
+
+/* s: sec_calendal */
+#sec_calendal .right_box .title_box {margin: 30px 0; font-size: 16px; font-weight: 700;}
+/* s: 캘린더 */
+#sec_calendal .ui-datepicker {width: 1000px; height: 660px; margin: 0 auto; padding: 0; background-color: transparent; border: none !important;}
+#sec_calendal .ui-datepicker table {margin: 0 auto; font-size: 1em; height: 100%;}
+#sec_calendal .ui-datepicker .ui-datepicker-header {position: relative; width: 100%; height: 40px; display: flex; justify-content: center; background-color: transparent; border: none;}
+#sec_calendal .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {position: absolute; top: 50%!important; transform: translateY(-50%);}
+#sec_calendal .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {position: initial; display: inline-block; margin: 0; width: 100%; height: 100%; background: url('../images/main/arrow.png') no-repeat center; background-size: 1.5em;}
+#sec_calendal .ui-datepicker .ui-datepicker-next span {transform: rotate(180deg); background-size: 1.5em;}
+#sec_calendal .ui-datepicker .ui-datepicker-title {font-size: 1.2em; line-height: 40px;}
+#sec_calendal .ui-datepicker th {width: 48px; padding: 0.5em 0; font-size: 1em;}
+#sec_calendal .ui-datepicker td {position: relative; width: 48px; height: 36px;}
+#sec_calendal .ui-datepicker td span, .ui-datepicker td a {height: 100%; padding: 0 2px;}
+#sec_calendal .ui-datepicker .ui-state-default {position: relative; border: 1px solid #ccc; box-sizing: border-box; background-color: transparent; font-size: 0.9em; text-align: right; color: #333; padding: .15em;}
+#sec_calendal .ui-datepicker .ui-state-default::before {content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+#sec_calendal .ui-datepicker .ui-state-default span {position: absolute; left: 50%; transform: translateX(-50%); bottom: 0.1em; width: 100%; height: initial; font-size: 16px; text-align: center;}
+/* e: 캘린더 */
+/* e: sec_calendal */
+
+/* s: sec_notice */
+#sec_notice .right_box .title_box {margin: 30px 0; font-size: 16px; font-weight: 700;}
+#sec_notice .right_box .search_notice {border: 1px solid #ccc; border-radius: 4px; padding: 14px 20px;}
+#sec_notice .right_box .search_notice select {padding: 4px 10px; font-size: 16px;}
+#sec_notice .right_box .search_notice input[type="text"] {margin: 0 6px; padding: 3px 6px; font-size: 16px;}
+#sec_notice .right_box .search_notice input[type="checkbox"] {width: 14px; height: 14px;}
+#sec_notice .right_box .search_notice button {margin-left: 6px; padding: 2px 10px; border-radius: 2px; background-color: #091747; font-size: 16px; color: #fefefe;}
+#sec_notice .right_box .noti_list {margin-top: 20px;}
+/* e: sec_notice */
+
+/* s: sec_board */
+#sec_board .right_box .title_box {margin: 30px 0; font-size: 16px; font-weight: 700;}
+#sec_board .right_box .board_insert {text-align: right;}
+#sec_board .right_box .board_insert a {font-size: 15px; border-bottom: 1px solid #555; color: #555;}
+#sec_board .right_box .board_list {margin-top: 20px;}
+/* e: sec_board */
+
+
+/* s: sec_works */
+#sec_works .right_box .title_box {margin: 30px 0; font-size: 16px; font-weight: 700;}
+#sec_works .right_box .btn_box {margin: 20px 0; text-align: right;}
+#sec_works .right_box .btn_box a {font-size: 15px; border-bottom: 1px solid #555; color: #555;}
+#sec_works .right_box .search_box {border: 1px solid #ccc; border-radius: 4px; padding: 14px 20px;}
+#sec_works .right_box .search_box label, #sec_works .right_box .search_box input[type="text"], #sec_works .right_box .search_box select, #sec_works .right_box .search_box .search_btn {margin-left: 6px; font-size: 16px;}
+#sec_works .right_box .search_box input[type="text"] {padding: 3px 6px;}
+#sec_works .right_box .search_box input[type="checkbox"] {width: 14px; height: 14px;}
+#sec_works .right_box .search_box select {padding: 4px 10px;}
+#sec_works .right_box .search_box .search_btn {padding: 2px 10px; border-radius: 2px; background-color: #091747; color: #fefefe;}
+#sec_works .right_box .works_list {margin-top: 20px; border-radius: 2px 2px 0 0; overflow: hidden;}
+#sec_works .right_box .works_list thead {background-color: #091747; color: #fefefe;}
+#sec_works .right_box .works_list tbody a {position: relative; color: #52D2D8;}
+
+/* s: tab-content - 일정관리 */
+#sec_works .right_box .toggle_box {margin-bottom: 20px; text-align: center;}
+#sec_works .right_box .toggle_box a {border-bottom: 1px solid #555; font-size: 15px; line-height: 18px; color: #555;}
+/* e: tab-content - 일정관리 */
+
+/* s: 캘린더 */
+#sec_works .ui-datepicker {width: 400px; margin: 0 auto; padding: 0; background-color: transparent; border: none !important;}
+#sec_works .ui-datepicker table {margin: 0 auto; font-size: 1em; height: 100%;}
+#sec_works .ui-datepicker .ui-datepicker-header {position: relative; width: 100%; height: 40px; display: flex; justify-content: center; background-color: transparent; border: none;}
+#sec_works .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {position: absolute; top: 50%!important; transform: translateY(-50%);}
+#sec_works .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {position: initial; display: inline-block; margin: 0; width: 100%; height: 100%; background: url('../images/main/arrow.png') no-repeat center; background-size: 1.5em;}
+#sec_works .ui-datepicker .ui-datepicker-next span {transform: rotate(180deg); background-size: 1.5em;}
+#sec_works .ui-datepicker .ui-datepicker-title {font-size: 1.2em; line-height: 40px;}
+#sec_works .ui-datepicker th {width: 48px; padding: 0.5em 0; font-size: 1em;}
+#sec_works .ui-datepicker td {position: relative; width: 48px; height: 36px;}
+#sec_works .ui-datepicker td span, .ui-datepicker td a {height: 100%; padding: 0 2px;}
+#sec_works .ui-datepicker .ui-state-default {position: relative; border: 1px solid #ccc; box-sizing: border-box; background-color: transparent; font-size: 0.9em; text-align: right; color: #333; padding: .15em;}
+#sec_works .ui-datepicker .ui-state-default::before {content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+#sec_works .ui-datepicker .ui-state-default span {position: absolute; left: 50%; transform: translateX(-50%); bottom: 0.1em; width: 100%; height: initial; font-size: 16px; text-align: center;}
+/* e: 캘린더 */
+#sec_works #approval_manage .search_box .select_date, #sec_works #attend_manage .search_box .select_date {margin-top: 10px; display: inline-block;}
+#sec_works #schedule_manage .search_box form, #sec_works #notice_manage .search_box form {display: flex; align-items: center;}
+/* e: sec_works */
+
+/* s: sec_editinfo */
+#sec_editinfo .title_box {margin: 30px 0; font-size: 16px; font-weight: 700;}
+#sec_editinfo .info_box {display: flex;}
+#sec_editinfo .info_box .my_profile {width: 150px;}
+#sec_editinfo .info_box .my_profile .img_box {height: 180px; border: 1px solid #ccc;}
+#sec_editinfo .info_box .my_profile label {margin-top: 10px; display: flex;}
+#sec_editinfo .info_box .my_profile input {font-size: 10px;}
+#sec_editinfo .info_box .my_info {display: flex; flex-direction: column;}
+/* e: sec_editinfo */
+
+/* s: sec_insertappr */
+#sec_insertappr .input_box .docs_sign {display: flex; align-items: center; justify-content: flex-end;}
+#sec_insertappr .input_box .docs_sign dl {width: 70px; text-align: center; border: 1px solid #555;}
+#sec_insertappr .input_box .docs_sign dl:not(:first-child) {border-left: none;}
+#sec_insertappr .input_box .docs_sign dt, #sec_insertappr .input_box .docs_sign dd {padding: 4px 0;}
+#sec_insertappr .input_box .docs_sign dt {border-bottom: 1px solid #555; font-size: 13px;}
+#sec_insertappr .input_box .docs_sign dd {height: 50px; font-size: 15px;}
+
+#sec_insertappr .input_box .docs_info {margin-top: 30px; display: flex; align-items: flex-end; justify-content: space-between;}
+#sec_insertappr .input_box .docs_info div dl {width: 280px; display: flex; border: 1px solid #555; text-align: center;}
+#sec_insertappr .input_box .docs_info div dl:last-child {border-top: none;}
+#sec_insertappr .input_box .docs_info div dt, 
+#sec_insertappr .input_box .docs_info div dd {height: 46px; line-height: 46px;}
+#sec_insertappr .input_box .docs_info div dt {width: 36%; border-right: 1px solid #555;}
+#sec_insertappr .input_box .docs_info div dd {width: 64%;}
+#sec_insertappr .input_box .docs_info > dl {display: flex; align-items: center; gap: 20px; font-size: 15px;}
+#sec_insertappr .input_box .docs_info > dl dd button {font-size: 15px; line-height: 19px; border-bottom: 1px solid #555;}
+#sec_insertappr .input_box .docs_details {margin-top: 30px;}
+#sec_insertappr .input_box .docs_details .docs_title {margin-bottom: 30px; text-align: center;}
+#sec_insertappr .input_box .docs_details .docs_title input {font-size: 32px; text-align: center; border-left: none; border-top: none; border-right: none; border-bottom: 1px solid #555;}
+#sec_insertappr .input_box .docs_details dl {width: 100%; border: 1px solid #555; text-align: center;}
+#sec_insertappr .input_box .docs_details dl:not(:last-child) {border-bottom: none;}
+#sec_insertappr .input_box .docs_details dl dt {width: 10%; height: 100%; display: flex; align-items: center; justify-content: center; border-right: 1px solid #555;}
+#sec_insertappr .input_box .docs_details dl dd {width: 90%;}
+#sec_insertappr .input_box .docs_details .docs_name, #sec_insertappr .input_box .docs_details .docs_date {height: 56px;}
+#sec_insertappr .input_box .docs_details .docs_cont {height: 478px;}
+#sec_insertappr .input_box .docs_details input {width: 100%; padding: 3px 0; border: none; font-size: 15px; text-align: center;}
+/* e: sec_insertappr */
+
+
+/* s: content_wrap */
+.content_wrap {max-width: 1000px; margin: 0 auto; padding: 30px 0;}
+.content_wrap .title_box {margin-bottom: 30px; font-size: 16px; font-weight: 700;}
+.content_wrap .input_box {display: flex; flex-direction: column;}
+.content_wrap .input_box label + label {margin-top: 10px;}
+.content_wrap .input_box label span {display: inline-block; width: 60px;}
+.content_wrap .input_box input {padding: 3px 6px; font-size: 16px;}
+.content_wrap .input_box textarea {margin-top: 6px; width: 100%; height: 400px; font-size: 16px;}
+.content_wrap .btn_box {margin-top: 30px; text-align: center;}
+.content_wrap .btn_box button {padding: 6px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;}
+.content_wrap .btn_box button:first-child {margin-right: 10px; border: 1px solid #00b6c2; color: #00b6c2;}
+/* e: content_wrap */

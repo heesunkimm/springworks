@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+ 
+<mapper namespace="com.sideproject.springworks.dto.mailMapper">  
+ 
+	<insert id="insertMail" parameterType="com.example.model.Mail">
+        insert into sw_mail values (seq_mail_no.nextval, #{mail_writer}, #{mail_pecipient}, '', '', '', '',
+        #{mail_title}, #{mail_content}, 'tt', sysdate)
+    </insert>
+    
+    <select id="getAllMails" resultType="mailDTO">
+        SELECT * FROM sw_mail
+    </select>							
+	
+</mapper>

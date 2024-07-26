@@ -11,11 +11,11 @@ public class PrivateBoardMapper {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	//°øÁö »çÇ× µî·Ï
-	public int insertNotice(PrivateBoardDTO dto) {
-		int res = sqlSession.insert("insertNotice",dto);
-		return res;
-	}
+//	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+//	public int insertNotice(PrivateBoardDTO dto) {
+//		int res = sqlSession.insert("insertNotice",dto);
+//		return res;
+//	}
 	
 	
 }

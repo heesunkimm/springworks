@@ -15,17 +15,17 @@ public class NoticeMapper {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	// »ç¿ëÀÚ - °øÁö»çÇ×
-	public List<NoticeDTO> listNotice(Map<String, Object> params){ 
-		List<NoticeDTO> listNotice = sqlSession.selectList("listNotice", params);
-		return listNotice;
-	}
-	
-	// °øÁö»çÇ× °Ç¼ö
-	public int getNoticeCount() {
-		int noticeCount = sqlSession.selectOne("getNoticeCount");
-		return noticeCount;
-	}
+//	// ï¿½ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	public List<NoticeDTO> listNotice(Map<String, Object> params){ 
+//		List<NoticeDTO> listNotice = sqlSession.selectList("listNotice", params);
+//		return listNotice;
+//	}
+//	
+//	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¼ï¿½
+//	public int getNoticeCount() {
+//		int noticeCount = sqlSession.selectOne("getNoticeCount");
+//		return noticeCount;
+//	}
 	
 	
 	

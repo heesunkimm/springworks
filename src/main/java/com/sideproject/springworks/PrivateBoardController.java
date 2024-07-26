@@ -16,17 +16,17 @@ public class PrivateBoardController {
 	@Autowired
 	PrivateBoardMapper privateBoardMapper;
 	
-	// ·Î±×ÀÎ¹öÆ° ´©¸£¸é ÀÍ¸í °Ô½ÃÆÇÀ¸·Î ÀÌµ¿
-	@RequestMapping(value = "/board.do", method = RequestMethod.POST)
-	public String login(HttpServletRequest req) {
-		return "user/board/board";
-	}
-	
-	// °øÁö»çÇ× µî·Ï ÆäÀÌÁö·Î ÀÌµ¿ 
-	@RequestMapping(value = "/insert_notice.do", method = RequestMethod.GET)
-	public String insertNoticePage() {
-		return "user/works/insert_notice";
-	}
+//	// ï¿½Î±ï¿½ï¿½Î¹ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Í¸ï¿½ ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
+//	@RequestMapping(value = "/board.do", method = RequestMethod.POST)
+//	public String login(HttpServletRequest req) {
+//		return "user/board/board";
+//	}
+//	
+//	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ 
+//	@RequestMapping(value = "/insert_notice.do", method = RequestMethod.GET)
+//	public String insertNoticePage() {
+//		return "user/works/insert_notice";
+//	}
 	 
 	// @RequestMapping(value = "/insert_notice.do", method = RequestMethod.POST)
 	

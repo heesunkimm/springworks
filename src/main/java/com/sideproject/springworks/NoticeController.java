@@ -22,32 +22,32 @@ public class NoticeController {
 	@Autowired
 	NoticeMapper mapper;
 	
-	// »ç¿ëÀÚ - °øÁö»çÇ×
-	@RequestMapping("/user_notice.do") 
-	public String userNotice(HttpServletRequest req, 
-			@RequestParam(value = "pageNum", required = false, defaultValue = "1") int pageNum){
-		
-		int noticeCount = mapper.getNoticeCount();		
-		int pageSize = 10;
-		int startRow = (pageNum-1) * pageSize + 1; // ÆäÀÌÁöº°·Î ½ÃÀÛ ³Ñ¹ö
-		int endRow = startRow + pageSize - 1; // ÆäÀÌÁöº°·Î ³¡ ³Ñ¹ö		
-		if (endRow > noticeCount) endRow = noticeCount;		
-		int no = noticeCount-startRow + 1;				
-		int pageBlock = 3; 		
-		int pageCount = noticeCount/pageSize + (noticeCount%pageSize == 0 ? 0 : 1);		
-		int startPage = (pageNum-1)/pageBlock * pageBlock +1;		
-		int endPage = startPage + pageBlock -1;		
-		if(endPage > pageCount) endPage = pageCount;				
-		
-		Map<String, Object> params = new HashMap<>();
-		params.put("startRow", startRow);
-		params.put("endRow", endRow);
-		
-		List<NoticeDTO> noticeList = mapper.listNotice(params);
-		
-		req.setAttribute("noticeList", noticeList);
-		return "notice/notice";
-		
-	}
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	@RequestMapping("/user_notice.do") 
+//	public String userNotice(HttpServletRequest req, 
+//			@RequestParam(value = "pageNum", required = false, defaultValue = "1") int pageNum){
+//		
+//		int noticeCount = mapper.getNoticeCount();		
+//		int pageSize = 10;
+//		int startRow = (pageNum-1) * pageSize + 1; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½
+//		int endRow = startRow + pageSize - 1; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ñ¹ï¿½		
+//		if (endRow > noticeCount) endRow = noticeCount;		
+//		int no = noticeCount-startRow + 1;				
+//		int pageBlock = 3; 		
+//		int pageCount = noticeCount/pageSize + (noticeCount%pageSize == 0 ? 0 : 1);		
+//		int startPage = (pageNum-1)/pageBlock * pageBlock +1;		
+//		int endPage = startPage + pageBlock -1;		
+//		if(endPage > pageCount) endPage = pageCount;				
+//		
+//		Map<String, Object> params = new HashMap<>();
+//		params.put("startRow", startRow);
+//		params.put("endRow", endRow);
+//		
+//		List<NoticeDTO> noticeList = mapper.listNotice(params);
+//		
+//		req.setAttribute("noticeList", noticeList);
+//		return "notice/notice";
+//		
+//	}
 	
 }

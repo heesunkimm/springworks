@@ -16,14 +16,14 @@ public class AttendMapper {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	public List<AttendanceDTO> attendList() {
-		List<AttendanceDTO> result = sqlSession.selectList("attendList");
+	public List<AttendanceDTO> attendList(String userId) {
+		List<AttendanceDTO> result = sqlSession.selectList("attendList",userId);
         System.out.println("Query result: " + result);
         return result;
 	}
 	
-	public OffDTO off() {
-		return sqlSession.selectOne("off");
+	public OffDTO off(String userId) {
+		return sqlSession.selectOne("off",userId);
 	}
 	
 	public int saveStartTime(String startTime) {

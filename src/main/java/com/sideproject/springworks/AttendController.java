@@ -8,8 +8,10 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,8 +32,10 @@ public class AttendController {
 	
 	@RequestMapping(value = "/attend.do")
 	public String attendList(HttpServletRequest req) {
-		List<AttendanceDTO> list = attendMapper.attendList();
-		OffDTO off = attendMapper.off(); 
+		HttpSession session = req.getSession();
+		String userId = (String) session.getAttribute("userId");	//임시로 아이디 받아오기
+		List<AttendanceDTO> list = attendMapper.attendList(userId);
+		OffDTO off = attendMapper.off(userId); 
 		
 		// 근무시간 계산
         for (AttendanceDTO attendance : list) {
@@ -61,12 +65,18 @@ public class AttendController {
         return String.format("%d시간 %d분", hours, minutes);
     }
 	
-	@PostMapping("/attendance/start")
-    public String startWork(@RequestBody Map<String, String> requestData) {
-		System.out.println(requestData);
-        String startTime = requestData.get("startTime");
-        attendMapper.saveStartTime(startTime); 
-        return "success";
+	// 출근 시간 저장을 처리하는 메서드
+	@RequestMapping(value = {"/attendance/start"}, method = RequestMethod.POST)
+    public ResponseEntity<String> startWork(@RequestBody Map<String, String> request) {
+        // 출근 시간 데이터를 가져옵니다.
+        String startTime = request.get("startTime");
+        System.out.println("출근 시간: " + startTime);
+
+        // 출근 시간을 저장하는 로직을 구현합니다.
+        // 예: MyBatis Mapper를 호출하여 DB에 저장합니다.
+
+        // 성공적으로 저장된 경우 200 OK 응답을 반환합니다.
+        return ResponseEntity.ok("출근 시간이 저장되었습니다.");
     }
 	/*
 	@RequestMapping("/getAttendanceData.do")

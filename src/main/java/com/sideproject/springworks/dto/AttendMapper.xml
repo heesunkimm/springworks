@@ -6,7 +6,7 @@
 <mapper namespace="com.sideproject.springworks.dto.AttendMapper">
 
 	<select id="attendList" resultType="AttendanceDTO"> 
-		select * from spw_attendance
+		select * from spw_attendance where user_id =#{userId} ORDER BY attend_date DESC
 	</select>
 	
 	<select id="off" resultType="OffDTO" >
@@ -15,7 +15,7 @@
 			off_all as offAll,
 			off_use as offUse,
 			off_passi as offPassi
-		 from spw_off where user_id = 20240725001
+		 from spw_off where user_id =#{userId}
 	</select>
 	
 	<insert id="insertStartTime" parameterType="String">

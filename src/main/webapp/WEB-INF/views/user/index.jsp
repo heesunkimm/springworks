@@ -152,14 +152,32 @@ document.getElementById('workButton').addEventListener('click', function() {
      this.innerText = '퇴근';
      isWorking = true;
 
-     
+     // AJAX를 통해 서버로 출근 시간 데이터 전송
+     var xhr = new XMLHttpRequest();
+     xhr.open('POST', '/attendance/start', true);
+     xhr.setRequestHeader('Content-Type', 'application/json');
+     xhr.onreadystatechange = function () {
+         if (xhr.readyState === 4 && xhr.status === 200) {
+             console.log('출근 시간이 저장되었습니다.');
+         }
+     };
+     xhr.send(JSON.stringify({ startTime: dateTime }));
  } else {
      // 퇴근 처리
      document.getElementById('endTime').innerText = dateTime.split(' ')[1];
      this.innerText = '출근';
      isWorking = false;
 
-     
+     // AJAX를 통해 서버로 퇴근 시간 데이터 전송
+     var xhr = new XMLHttpRequest();
+     xhr.open('POST', '/attendance/end', true);
+     xhr.setRequestHeader('Content-Type', 'application/json');
+     xhr.onreadystatechange = function () {
+         if (xhr.readyState === 4 && xhr.status === 200) {
+             console.log('퇴근 시간이 저장되었습니다.');
+         }
+     };
+     xhr.send(JSON.stringify({ endTime: dateTime }));
  }
 });
 

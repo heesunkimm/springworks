@@ -18,50 +18,59 @@
                 <div class="info_box">
                     <div class="my_profile">
                         <div class="img_box">
-                            <!-- <img src="" alt="" /> -->
+                            <img class="my_images" src="" alt="" style="display: none;" />
                         </div>
-                        <label>
-                            <input type="file" name="" value="" />
-                        </label>
+                        <div class="file_box">
+                            <input class="file_name" placeholder="첨부파일" readonly>
+                            <label for="file">사진찾기</label>
+                            <input type="file" id="file" name="" value="" />
+                        </div>
                     </div>
                     <div class="my_info">
                         <label>이름
-                            <input type="text" name="" value="" readonly>
+                            <input type="text" name="" value="">
+                        </label>
+                        <label>생년월일
+                            <input class="read_only" type="text" name="" value="" readonly>
                         </label>
                         <label>핸드폰 번호
                             <input type="text" name="" value="">
                         </label>
-                        <!-- 변경 불가 기본 정보 -->
-                        <div class="no_change">
-                            <label>내선번호
-                                <input type="text" name="" value="" readonly>
-                            </label>
-                            <label>본부
-                                <input type="text" name="" value="" readonly>
-                            </label>
-                            <label>소속
-                                <input type="text" name="" value="" readonly>
-                            </label>
-                            <label>직위
-                                <input type="text" name="" value="" readonly>
-                            </label>
-                            <label>직책
-                                <input type="text" name="" value="" readonly>
-                            </label>
-                        </div>
-                        <div class="pw_changebox">
-                            <label>새 비밀번호 입력
-                                <input type="password" name="" value="" readonly>
-                            </label>
-                            <label>새 비밀번호 확인
-                                <input type="password" name="" value="" readonly>
-                            </label>
+                    </div>
+                    
+                    <!-- 변경 불가 기본 정보 -->
+                    <div class="no_change">
+                        <label>메일주소
+                            <input class="read_only" type="text" name="" value="" readonly>
+                        </label>
+                        <label>내선번호
+                            <input class="read_only" type="text" name="" value="" readonly>
+                        </label>
+                        <label>본부
+                            <input class="read_only" type="text" name="" value="" readonly>
+                        </label>
+                        <label>소속
+                            <input class="read_only" type="text" name="" value="" readonly>
+                        </label>
+                        <label>직위
+                            <input class="read_only" type="text" name="" value="" readonly>
+                        </label>
+                        <label>직책
+                            <input class="read_only" type="text" name="" value="" readonly>
+                        </label>
+                    </div>
+                    <div class="pw_changebox">
+                        <label>새 비밀번호 입력
+                            <input type="password" name="" value="">
+                        </label>
+                        <label>새 비밀번호 확인
+                            <input type="password" name="" value="">
+                        </label>
 
-                            <ul class="pw_warningbox">
-                                <li>* 비밀번호는 8~15자리 영어,숫자,특수기호를 포함해서 작성해주세요.</li>
-                                <li><span></span></li>
-                            </ul>
-                        </div>
+                        <ul class="pw_warningbox">
+                            <li>* 비밀번호는 8~15자리 영어,숫자,특수기호를 포함해서 작성해주세요.</li>
+                            <li><span></span></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="pbtn_box">
@@ -72,3 +81,25 @@
     </section>
     <!-- e: content -->
 <%@ include file="../index_bottom.jsp" %>
+<script>
+    // input 파일 커스텀
+    $('#file').on('change', function() {
+        let fileName = $(this).val().split('\\').pop();
+        $('.file_name').val(fileName);
+    });
+
+    $('#file').on('change', function() {
+        let file = this.files[0];
+        let reader = new FileReader();
+        
+        reader.onload = function(e) {
+            $('.img_box').css('position','initial');
+            $('.my_images').show();
+            $('.my_images').attr('src', e.target.result).show();
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    });
+</script>

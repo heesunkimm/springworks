@@ -24,10 +24,16 @@ public class UserController {
 		return "login";
 	}
 	
-//	@RequestMapping(value = {"/edit_info.do"}, method = RequestMethod.GET)
-//	public String editInfo(HttpServletRequest req) {
-//		
-//		return "user/edit/edit_info";
-//	}
+	@RequestMapping(value = {"/edit_info.do"}, method = RequestMethod.GET)
+	public String editInfo(HttpServletRequest req) {
+		
+		return "user/edit/edit_info";
+	}
+	
+	@RequestMapping(value = {"/works.do"}, method = RequestMethod.GET)
+	public String works(HttpServletRequest req) {
+		
+		return "user/works/works";
+	}
 	
 }

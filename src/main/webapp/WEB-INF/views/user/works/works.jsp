@@ -496,3 +496,26 @@
      </section>
     <!-- e: content -->
 <%@ include file="../index_bottom.jsp" %>
+<script>
+   $('.userBirth').on('input', function() {
+           let input = $(this).val();
+           input = input.replace(/[^0-9]/g, '');
+           if (input.length >= 5 && input.length <= 6) {
+               input = input.replace(/^(\d{4})(\d{1,2})/, '$1-$2');
+           } else if (input.length > 6) {
+               input = input.replace(/^(\d{4})(\d{2})(\d{1,2})/, '$1-$2-$3');
+           } else if (input.length >= 4) {
+               input = input.replace(/^(\d{4})(\d{1,2})/, '$1-$2');
+           }
+           $(this).val(input);
+       });
+
+       $('select').each(function() {
+           $(this).change(function() {
+               let optgroupLabel = $(this).find('option:selected').closest('optgroup').attr('label');
+               let hiddenInputId = $(this).hasClass('myGroup') ? '#userGroup' : '#userPosition';
+               $(hiddenInputId).val(optgroupLabel);
+               console.log(optgroupLabel);
+           });
+       });
+</script>

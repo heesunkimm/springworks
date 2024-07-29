@@ -5,6 +5,22 @@
  
 <mapper namespace="com.sideproject.springworks.dto.AttendMapper">
 
+	<select id="attendList" resultType="AttendanceDTO"> 
+		select * from spw_attendance
+	</select>
 	
+	<select id="off" resultType="OffDTO" >
+		select off_id as offID,
+			user_id as userId,
+			off_all as offAll,
+			off_use as offUse,
+			off_passi as offPassi
+		 from spw_off where user_id = 20240725001
+	</select>
+	
+	<insert id="insertStartTime" parameterType="String">
+        <!--  INSERT INTO spw_attendance (start_time)
+        VALUES (#{startTime})-->
+	</insert>
 
 </mapper>

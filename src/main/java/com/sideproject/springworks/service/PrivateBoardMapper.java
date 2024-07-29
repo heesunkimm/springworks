@@ -1,5 +1,9 @@
 package com.sideproject.springworks.service;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,14 +12,24 @@ import com.sideproject.springworks.dto.PrivateBoardDTO;
 
 @Service
 public class PrivateBoardMapper {
+	
 	@Autowired
 	private SqlSession sqlSession;
 	
-//	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
-//	public int insertNotice(PrivateBoardDTO dto) {
-//		int res = sqlSession.insert("insertNotice",dto);
-//		return res;
-//	}
+	// ÀÍ¸í°Ô½ÃÆÇ - ¸ÞÀÎ 
+	public List<PrivateBoardDTO> privateBoard(){
+		List<PrivateBoardDTO> list = sqlSession.selectList("privateBoard");
+		return list;
+	}
+ 
+	// ÀÍ¸í°Ô½ÃÆÇ - °øÁö »çÇ× µî·ÏÇÏ´Â ÆäÀÌÁö·Î ÀÌµ¿
+	public int insertBoard(PrivateBoardDTO dto) {
+		int res = sqlSession.insert("insertBoard",dto);
+		return res;
+	}
+	
+	
+
 	
 	
 }

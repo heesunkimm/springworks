@@ -5,6 +5,20 @@
  
 <mapper namespace="com.sideproject.springworks.dto.privateBoardMapper">
 
+	<select id="privateBoard" resultType="PrivateBoardDTO">
+		select privateBoard_num, privateBoard_title, privateBoard_writer, privateBoard_date, privateBoard_readCount from spw_privateBoard
+		
+	</select>
 	
+	<!-- 공지사항 등록 -->
+	<insert id="insertBoard" parameterType="PrivateBoardDTO">
+		insert into spw_privateBoard values(seq_privateBoard_num.nextval, #{privateBoard_title}, #{privateBoard_content}, #{privateBoard_writer}, #{privateBoard_readCount}, sysdate)
+	</insert>
+	
+	
+	
+	
+	 
+ 
 	
 </mapper>

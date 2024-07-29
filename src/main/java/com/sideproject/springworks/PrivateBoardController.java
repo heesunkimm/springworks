@@ -1,11 +1,16 @@
 package com.sideproject.springworks;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sideproject.springworks.dto.PrivateBoardDTO;
 import com.sideproject.springworks.service.PrivateBoardMapper;
@@ -16,21 +21,32 @@ public class PrivateBoardController {
 	@Autowired
 	PrivateBoardMapper privateBoardMapper;
 	
-//	// ï¿½Î±ï¿½ï¿½Î¹ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Í¸ï¿½ ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
-//	@RequestMapping(value = "/board.do", method = RequestMethod.POST)
-//	public String login(HttpServletRequest req) {
-//		return "user/board/board";
-//	}
-//	
-//	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ 
-//	@RequestMapping(value = "/insert_notice.do", method = RequestMethod.GET)
-//	public String insertNoticePage() {
-//		return "user/works/insert_notice";
-//	}
-	 
-	// @RequestMapping(value = "/insert_notice.do", method = RequestMethod.POST)
+	// ÀÍ¸í °Ô½ÃÆÇ main
+	@RequestMapping(value = "/board.do")
+	public String privateBoard(HttpServletRequest req) {
+		List<PrivateBoardDTO> list = privateBoardMapper.privateBoard();
+		System.out.println(list);
+		req.setAttribute("privateBoard", list);
+		return "user/board/board";
+	}
 	
+	// °øÁö»çÇ× ´©¸£¸é ÀÌµ¿  
+	@RequestMapping(value = "/insert_notice.do", method = RequestMethod.GET)
+	public String moveBoardPage() {
+		return "user/works/insert_notice";
+	}
 	
+	// °øÁö»çÇ× µî·Ï 
+	@RequestMapping(value = "/insert_notice.do", method = RequestMethod.POST)
+	public String writeBoardPage(HttpServletRequest req, PrivateBoardDTO dto) {
+		 int res = privateBoardMapper.insertBoard(dto);
+		 return "redirect:board.do";
+	}
+	
+ 
+ 
+	
+ 
  
 	 
 	

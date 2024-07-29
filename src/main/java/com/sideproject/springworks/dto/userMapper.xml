@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sideproject.springworks.dto.userMapper">
+	<!-- 계정생성 -->
+	<!-- <insert id="createUser" resultType="UserDTO">
+		INSERT INTO spw_user values (#{user_id},#{user_passwd},'',#{user_name},#{user_gender},TO_DATE(#{user_birth}, 'YYYY-MM-DD'),#{user_tel1},#{user_tel2},#{user_tel3},#{user_hp1},#{user_hp2},#{user_hp3},#{user_email1},'',#{user_group},#{user_part},#{user_position},#{user_duty},#{user_authority},TO_DATE(sysdate, 'YYYY-MM-DD'),'');
+	</insert> -->
 </mapper>

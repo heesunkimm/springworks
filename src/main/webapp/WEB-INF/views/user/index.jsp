@@ -14,20 +14,22 @@
                     <a class="my_edit" href="javascript:;">로그아웃</a>
                 </div>
             </div>
-
+			
             <div class="attend_box">
                 <div class="txt_box">
                     <p class="txt_tit">근태 관리</p>
-                    <p class="txt_today">오늘 날짜</p>
-                    <p class="txt_clock">현재 시간</p>
+                    <!-- s: 주경 시간,날짜 표시 -->
+                    <p class="txt_today" id="currentDate">오늘 날짜</p> 
+                    <p class="txt_clock" id="currentTime">현재 시간</p> 
+                    <!-- e: 주경 -->
                 </div>
                 <div class="attend_check">
                     <div class="txt_box">
-                        <p>출근시간 - <span class="check_time">00:00:00</span></p>
-                        <p>퇴근시간 - <span class="check_time">00:00:00</span></p>
-                    </div>
+                        <p>출근시간 - <span class="check_time" id="startTime">00:00:00</span></p>
+                        <p>퇴근시간 - <span class="check_time" id="endTime">00:00:00</span></p>
+                    </div> 
                     <div class="btn_box">
-                        <button type="button">출근</button>
+                        <button type="button" id="workButton">출근</button>
                     </div>
                 </div>
             </div>
@@ -111,3 +113,55 @@
     </section>
     <!-- e: content -->
 <%@ include file="index_bottom.jsp" %>
+<script>
+//s:주경 
+// 현재 날짜와 시간을 업데이트하는 함수
+function updateDateTime() {
+    var now = new Date();
+    // 날짜를 "YYYY-MM-DD" 형식으로 포맷팅
+    var date = now.getFullYear() + '-' + 
+               ('0' + (now.getMonth() + 1)).slice(-2) + '-' + 
+               ('0' + now.getDate()).slice(-2);
+    // 시간을 "HH:MM:SS" 형식으로 포맷팅
+    var time = ('0' + now.getHours()).slice(-2) + ':' + 
+               ('0' + now.getMinutes()).slice(-2) + ':' + 
+               ('0' + now.getSeconds()).slice(-2);
+    
+    document.getElementById('currentDate').innerText = date;
+    document.getElementById('currentTime').innerText = time;
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
+
+var isWorking = false; // 출근 여부를 추적하는 변수
+
+//출근 또는 퇴근 버튼 클릭 이벤트 처리
+document.getElementById('workButton').addEventListener('click', function() {
+ var now = new Date();
+ var dateTime = now.getFullYear() + '-' + 
+                ('0' + (now.getMonth() + 1)).slice(-2) + '-' + 
+                ('0' + now.getDate()).slice(-2) + ' ' + 
+                ('0' + now.getHours()).slice(-2) + ':' + 
+                ('0' + now.getMinutes()).slice(-2) + ':' + 
+                ('0' + now.getSeconds()).slice(-2);
+ 
+ if (!isWorking) {
+     // 출근 처리
+     document.getElementById('startTime').innerText = dateTime.split(' ')[1];
+     this.innerText = '퇴근';
+     isWorking = true;
+
+     
+ } else {
+     // 퇴근 처리
+     document.getElementById('endTime').innerText = dateTime.split(' ')[1];
+     this.innerText = '출근';
+     isWorking = false;
+
+     
+ }
+});
+
+//e:주경
+</script>

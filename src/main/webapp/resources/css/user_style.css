@@ -212,7 +212,7 @@ header .edit_box .img_box {width: 16px; height: 16px;}
 #sec_approval .approval_insert .btn_box button {padding: 6px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;}
 #sec_approval .approval_insert .btn_box button:first-child {margin-right: 10px; border: 1px solid #00b6c2; color: #00b6c2;}
 
-#sec_approval .popup_box form > ul {width: 600px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;}
+#sec_approval .popup_box form > ul {width: 600px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 0;}
 #sec_approval .popup_box form > ul > li {width: 170px; height: 80px; padding: 10px; border: 1px solid #ccc; border-radius: 4px;}
 #sec_approval .popup_box form > ul > li .txt_box .txt_group {font-size: 15px; color: #555;}
 #sec_approval .popup_box form > ul > li .txt_box .txt_posi {margin-top: 10px; font-size: 13px; color: #999;}
@@ -380,16 +380,62 @@ header .edit_box .img_box {width: 16px; height: 16px;}
 /* e: 캘린더 */
 #sec_works #approval_manage .search_box .select_date, #sec_works #attend_manage .search_box .select_date {margin-top: 10px; display: inline-block;}
 #sec_works #schedule_manage .search_box form, #sec_works #notice_manage .search_box form {display: flex; align-items: center;}
+
+#sec_works .popup_box {width: 360px;}
+#sec_works .popup_box .input_box {display: flex; flex-direction: column;}
+#sec_works .popup_box .input_box label, 
+#sec_works .popup_box .input_box input,
+#sec_works .popup_box .input_box select, 
+#sec_works .popup_box .input_box span {display: inline-block; font-size: 14px;}
+#sec_works .popup_box .input_box span {width: 84px;}
+#sec_works .popup_box .input_box em  {margin: 0 4px;}
+#sec_works .popup_box .input_box > label:not(:first-child), #sec_works .popup_box .input_box > div {margin-top: 10px; display: flex; width: auto;}
+#sec_works .popup_box .input_box > label:first-child {display: flex; width: auto;}
+#sec_works .popup_box .input_box .email_box p {margin-left: 4px; font-size: 14px;}
+#sec_works .popup_box .input_box .user_loginfo {display: flex; border-top: 1px solid #ddd;}
+#sec_works .popup_box .input_box .user_loginfo button {padding: 3px 10px; margin: 10px auto 0; border-radius: 2px; background-color: #091747; font-size: 14px; color: #fefefe;}
+#sec_works .popup_box .input_box .user_loginfo label, #sec_works .popup_box .input_box .user_loginfo ul {margin-top: 10px;}
+#sec_works .popup_box .input_box .user_loginfo label {display: flex; align-items: center;}
+#sec_works .popup_box .log_noti {margin-top: 8px; font-size: 12px; line-height: 16px; color: #555;}
+
+#sec_works .popup_box .input_box input {width: 100px; text-align: center;}
+#sec_works .popup_box .input_box .tel_box input {width: 50px;}
+#sec_works .popup_box .input_box input {padding: 2px 6px;}
+#sec_works .popup_box .input_box select {width: 140px; padding: 2px 0;padding: 2px 0;}
+#sec_works .popup_box .input_box select.select_gender {width: 50px;}
+#sec_works .popup_box .input_box select.select_hp1 {width: 64px;}
 /* e: sec_works */
 
 /* s: sec_editinfo */
 #sec_editinfo .title_box {margin: 30px 0; font-size: 16px; font-weight: 700;}
-#sec_editinfo .info_box {display: flex;}
-#sec_editinfo .info_box .my_profile {width: 150px;}
-#sec_editinfo .info_box .my_profile .img_box {height: 180px; border: 1px solid #ccc;}
-#sec_editinfo .info_box .my_profile label {margin-top: 10px; display: flex;}
-#sec_editinfo .info_box .my_profile input {font-size: 10px;}
-#sec_editinfo .info_box .my_info {display: flex; flex-direction: column;}
+#sec_editinfo .info_box {padding-left: 100px; display: flex; flex-wrap: wrap; gap: 30px;}
+#sec_editinfo .info_box .my_profile .img_box {position: relative; width: 120px; height: 120px; overflow: hidden; margin: 0 auto; border: 1px solid #ccc; border-radius: 50%;}
+#sec_editinfo .info_box .my_profile .img_box::before {content: '사진 등록'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; font-size: 13px; color: #aaa; text-align: center; z-index: -1;}
+#sec_editinfo .info_box .my_profile input {font-size: 11px;}
+
+#sec_editinfo .file_box .file_name {width: 110px;}
+#sec_editinfo .file_box label {margin-left: 6px; width: 48px; font-size: 10px; line-height: 26px;}
+
+#sec_editinfo .info_box .my_info {display: flex; flex-direction: column; justify-content: center;}
+#sec_editinfo .info_box .my_info label {width: 340px; display: flex; align-items: center; justify-content: space-between; font-size: 16px;}
+#sec_editinfo .info_box label + label, 
+#sec_editinfo .info_box div {margin-top: 10px;}
+#sec_editinfo .info_box .my_info input, 
+#sec_editinfo .info_box .no_change input, 
+#sec_editinfo .info_box .pw_changebox input {padding: 3px 6px; font-size: 16px;}
+
+#sec_editinfo .info_box .read_only {border: none; background-color: #eee; text-align: center; color: #555;}
+
+#sec_editinfo .info_box .no_change, 
+#sec_editinfo .info_box .pw_changebox {width: 100%; display: flex; flex-direction: column;}
+#sec_editinfo .info_box .no_change label, 
+#sec_editinfo .info_box .pw_changebox label {display: flex; align-items: center; justify-content: space-between; font-size: 16px;}
+
+#sec_editinfo .info_box .no_change label {width: 320px;}
+#sec_editinfo .info_box .pw_changebox label {width: 360px;}
+#sec_editinfo .info_box .pw_warningbox {margin-top: 10px; font-size: 13px; line-height: 16px; color: #555;}
+#sec_editinfo .pbtn_box {margin-top: 30px; text-align: center;}
+#sec_editinfo .pbtn_box button {padding: 4px 10px; background-color: #091747; color: #fefefe; border-radius: 4px;}
 /* e: sec_editinfo */
 
 /* s: sec_insertappr */

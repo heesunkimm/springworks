@@ -8,7 +8,7 @@ public class NoticeDTO {
 	private String notice_writer;
 	private String notice_regDate;
 	private int notice_readCount;
-	
+		
 	public int getNotice_num() {
 		return notice_num;
 	}
@@ -46,5 +46,14 @@ public class NoticeDTO {
 		this.notice_readCount = notice_readCount;
 	}
 	
+	// 조인
+	private String user_name;
+
+	public String getUser_name() {
+		return user_name;
+	}
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
 	
 }

@@ -3,9 +3,5 @@
 <!-- message.jsp -->
 <script type="text/javascript">
 	alert("${msg}")
-	if ("${url}" && "${url}" !== "") {
-                window.location.href = "${url}";
-            } else {
-                history.back();
-            }
+	location.href="${url}"
 </script>

@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sideproject.springworks.dto.userMapper">
-	<!-- 계정생성 -->
-	<!-- <insert id="createUser" resultType="UserDTO">
-		INSERT INTO spw_user values (#{user_id},#{user_passwd},'',#{user_name},#{user_gender},TO_DATE(#{user_birth}, 'YYYY-MM-DD'),#{user_tel1},#{user_tel2},#{user_tel3},#{user_hp1},#{user_hp2},#{user_hp3},#{user_email1},'',#{user_group},#{user_part},#{user_position},#{user_duty},#{user_authority},TO_DATE(sysdate, 'YYYY-MM-DD'),'');
-	</insert> -->
+	<!--  로그인  -->
+	<select id="findUserId" parameterType="string" resultType="userDTO">
+		select * from spw_user where user_id = #{id}
+	</select>
+	<!--  비밀번호 재설정  -->
+	<update id="updatePasswd" parameterType="UserDTO">
+		update spw_user set user_passwd = #{user_passwd} where user_id = #{user_id}
+	</update>
+	<!--  계정생성  -->
+	<insert id="createUser" parameterType="UserDTO">
+		insert into spw_user (user_id, user_passwd, user_images, user_name, user_gender, user_birth, user_tel1, user_tel2, user_tel3, user_hp1, user_hp2, user_hp3, user_email1, user_email2, user_group, user_part, user_position, user_duty, user_authority, user_joindate, user_resign) values (#{user_id}, #{user_passwd}, #{user_images}, #{user_name}, #{user_gender}, TO_DATE(#{user_birth}, 'YYYY-MM-DD'), #{user_tel1}, #{user_tel2}, #{user_tel3}, #{user_hp1}, #{user_hp2}, #{user_hp3}, #{user_email1}, '@springworks.co.kr', #{user_group}, #{user_part}, #{user_position}, #{user_duty}, #{user_authority}, TO_DATE(sysdate, 'YYYY-MM-DD'), '재직중')
+	</insert>
 </mapper>

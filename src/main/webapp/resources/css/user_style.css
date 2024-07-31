@@ -14,7 +14,7 @@ header .edit_box .img_box {width: 16px; height: 16px;}
 .content .left_box .cont_list li a {display: block; padding: 4px 10px;}
 .content .left_box .cont_list li:hover {background-color: #ebeff4;}
 .content .right_box {width: 1100px; margin: 0 auto;}
-#sec_mailbox .tab-content, #sec_approval .right_box, #sec_conference .right_box, #sec_editinfo .right_box {padding: 30px 0;}
+#sec_mailbox .content_box, #sec_approval .right_box, #sec_conference .right_box, #sec_editinfo .right_box {padding: 30px 0;}
 /* e: div 영역 공통 */
 
 /* s: 메일 영역 공통 */
@@ -112,24 +112,24 @@ header .edit_box .img_box {width: 16px; height: 16px;}
 /* e: sec_mailbox -left-box */
 
 /* s: sec_mailbox -right-box */
-/* s: sec_mailbox - tab-content 공통 */
-#sec_mailbox .tab-content .title_box {margin-bottom: 30px; font-size: 16px; font-weight: 700;}
-#sec_mailbox .tab-content .title_box em, #sec_mailbox .tab-content .title_box span {font-size: 16px;}
-#sec_mailbox .tab-content .title_box span {margin: 0 2px;}
-#sec_mailbox .tab-content .title_box .not_read {color: #52D2D8;}
-#sec_mailbox .tab-content .mail_label {width: 1000px; display: inline-flex; justify-content: space-between;}
-#sec_mailbox .tab-content input[type="text"] {width: 916px; border-bottom: 1px solid #ccc; border-left: none; border-top: none; border-right: none; font-size: 16px; padding: 2px 4px;}
-#sec_mailbox .tab-content input[type="file"] {border-bottom: 1px solid #ccc; border-left: none; border-top: none; border-right: none;}
-#sec_mailbox .tab-content .mail_content {margin-top: 30px; width: 100%; min-height: 500px;}
-#sec_mailbox .tab-content textarea {width: 100%; min-height: 500px; font-size: 16px;}
+/* s: sec_mailbox - content_box 공통 */
+#sec_mailbox .content_box .title_box {margin-bottom: 30px; font-size: 16px; font-weight: 700;}
+#sec_mailbox .content_box .title_box em, #sec_mailbox .content_box .title_box span {font-size: 16px;}
+#sec_mailbox .content_box .title_box span {margin: 0 2px;}
+#sec_mailbox .content_box .title_box .not_read {color: #52D2D8;}
+#sec_mailbox .content_box .mail_label {width: 1000px; display: inline-flex; justify-content: space-between;}
+#sec_mailbox .content_box input[type="text"] {width: 916px; border-bottom: 1px solid #ccc; border-left: none; border-top: none; border-right: none; font-size: 16px; padding: 2px 4px;}
+#sec_mailbox .content_box input[type="file"] {border-bottom: 1px solid #ccc; border-left: none; border-top: none; border-right: none;}
+#sec_mailbox .content_box .mail_content {margin-top: 30px; width: 100%; min-height: 500px;}
+#sec_mailbox .content_box textarea {width: 100%; min-height: 500px; font-size: 16px;}
 
-#sec_mailbox .tab-content .mail_toolbox {display: flex; align-items: center; padding: 0 10px;}
-#sec_mailbox .tab-content .mail_toolbox .mail_check label {width: 16px; height: 16px}
-#sec_mailbox .tab-content .mail_toolbox .mail_check label input {width: 100%; height: 100%;}
-#sec_mailbox .tab-content .mail_toolbox .select_box {margin-left: 30px; display: flex; align-items: center; gap: 10px; font-size: 16px; line-height: 20px;}
-#sec_mailbox .tab-content .mail_toolbox .select_box select {font-size: 14px; padding: 2px 0; border-radius: 2px;}
-#sec_mailbox .tab-content .mail_box {margin-top: 10px; padding: 0 10px;}
-/* e: sec_mailbox - tab-content 공통 */
+#sec_mailbox .content_box .mail_toolbox {display: flex; align-items: center; padding: 0 10px;}
+#sec_mailbox .content_box .mail_toolbox .mail_check label {width: 16px; height: 16px}
+#sec_mailbox .content_box .mail_toolbox .mail_check label input {width: 100%; height: 100%;}
+#sec_mailbox .content_box .mail_toolbox .select_box {margin-left: 30px; display: flex; align-items: center; gap: 10px; font-size: 16px; line-height: 20px;}
+#sec_mailbox .content_box .mail_toolbox .select_box select {font-size: 14px; padding: 2px 0; border-radius: 2px;}
+#sec_mailbox .content_box .mail_box {margin-top: 10px; padding: 0 10px;}
+/* e: sec_mailbox - content_box 공통 */
 
 /* mailbox_write: 메일쓰기 */
 #sec_mailbox #mailbox_write .mail_toolbar {display: flex; align-items: center; gap: 10px;}
@@ -159,20 +159,20 @@ header .edit_box .img_box {width: 16px; height: 16px;}
 #sec_approval .approval_list li a {display: block; padding: 4px 10px;}
 #sec_approval .approval_list li:hover {background-color: #ebeff4;}
 
-#sec_approval .tab-content .title_box {margin-bottom: 30px; font-size: 16px; font-weight: 700;}
-#sec_approval .tab-content .search_box {border: 1px solid #ccc; border-radius: 4px; padding: 14px 20px;}
-#sec_approval .tab-content .search_box .input_title {width: 270px;}
-#sec_approval .tab-content .search_box .input_writer {width: 120px;}
-#sec_approval .tab-content .search_box span, #sec_approval .tab-content .search_box input[type="text"], #sec_approval .tab-content .search_box select, #sec_approval .tab-content .search_box button {margin-left: 6px; font-size: 16px;}
-#sec_approval .tab-content .search_box .select_date {margin-bottom: 10px;}
-#sec_approval .tab-content .search_box label + label {margin-left: 6px;}
-#sec_approval .tab-content .search_box select {padding: 4px 10px;}
-#sec_approval .tab-content .search_box input[type="text"] {padding: 3px 6px;}
-#sec_approval .tab-content .search_box button {padding: 2px 10px; border-radius: 2px; background-color: #091747; color: #fefefe;}
-#sec_approval .tab-content .approval_list {margin-top: 20px;}
+#sec_approval .content_box .title_box {margin-bottom: 30px; font-size: 16px; font-weight: 700;}
+#sec_approval .content_box .search_box {border: 1px solid #ccc; border-radius: 4px; padding: 14px 20px;}
+#sec_approval .content_box .search_box .input_title {width: 270px;}
+#sec_approval .content_box .search_box .input_writer {width: 120px;}
+#sec_approval .content_box .search_box span, #sec_approval .content_box .search_box input[type="text"], #sec_approval .content_box .search_box select, #sec_approval .content_box .search_box button {margin-left: 6px; font-size: 16px;}
+#sec_approval .content_box .search_box .select_date {margin-bottom: 10px;}
+#sec_approval .content_box .search_box label + label {margin-left: 6px;}
+#sec_approval .content_box .search_box select {padding: 4px 10px;}
+#sec_approval .content_box .search_box input[type="text"] {padding: 3px 6px;}
+#sec_approval .content_box .search_box button {padding: 2px 10px; border-radius: 2px; background-color: #091747; color: #fefefe;}
+#sec_approval .content_box .approval_list {margin-top: 20px;}
 
-#sec_approval .tab-content .search_box .check_label {display: inline-flex; align-items: center; gap: 6px;}
-#sec_approval .tab-content .search_box input[type="checkbox"] {width: 14px; height: 14px;}
+#sec_approval .content_box .search_box .check_label {display: inline-flex; align-items: center; gap: 6px;}
+#sec_approval .content_box .search_box input[type="checkbox"] {width: 14px; height: 14px;}
 
 #sec_approval .approval_insert select {margin-left: 6px; padding: 4px 10px; font-size: 16px;}
 #sec_approval .approval_insert .input_box .docs_sign {margin-top: 30px; display: flex; align-items: center; justify-content: flex-end;}
